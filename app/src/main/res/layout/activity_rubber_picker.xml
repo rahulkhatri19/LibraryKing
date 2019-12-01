@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        tools:context=".activity.RubberPickerActivity">
+
+    <com.jem.rubberpicker.RubberSeekBar
+            android:id="@+id/rubberSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:dampingRatio="0.3"
+            app:defaultThumbRadius="16dp"
+            app:elasticBehavior="cubic"
+            app:highlightDefaultThumbOnTouchColor="#CD5D67"
+            app:highlightTrackColor="#BA1F33"
+            app:highlightTrackWidth="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:maxValue="80"
+            app:minValue="20"
+            app:normalTrackColor="#AAAAAA"
+            app:normalTrackWidth="4dp"
+            app:stiffness="300"
+            app:stretchRange="24dp" />
+
+    <com.jem.rubberpicker.RubberRangePicker
+            android:id="@+id/rubberRangePicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            app:dampingRatio="0.4"
+            app:defaultThumbRadius="16dp"
+            app:elasticBehavior="linear"
+            app:highlightDefaultThumbOnTouchColor="#CD5D67"
+            app:highlightTrackColor="#BA1F33"
+            app:highlightTrackWidth="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_seekBar"
+            app:maxValue="100"
+            app:minValue="0"
+            app:normalTrackColor="#AAAAAA"
+            app:normalTrackWidth="4dp"
+            app:stiffness="400"
+            app:stretchRange="36dp" />
+
+    <TextView
+            android:id="@+id/tv_seekBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:text="Ruber Seek Bar: "
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rubberSeekBar" />
+
+    <TextView
+            android:id="@+id/tv_rangeBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:text="Range Bar:"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rubberRangePicker" />
+
+    <Button
+            android:id="@+id/btn_range"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Range Picker"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_rangeBar" />
+
+    <TextView
+            android:id="@+id/tv_range"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Range"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_range" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
